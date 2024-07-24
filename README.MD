@@ -10,7 +10,8 @@ To use this workflow, simply copy the `daily-commit.yml` file into the `.github/
 
 1. Ensure you have a `.github/workflows` directory in your repository.
 2. Copy the `daily-commit.yml` file into the `.github/workflows` directory.
-3. Make sure you have a GitHub token set up in your repository secrets as `GITHUB_TOKEN`.
+3. The `GITHUB_TOKEN` is automatically provided by GitHub Actions, so you do not need to manually set it up in your repository secrets.
+4.
 
 ## Example
 
@@ -41,6 +42,8 @@ jobs:
           echo "Update: $(date)" >> multiple-daily-updates.txt
 
       - name: Commit Changes
+        # Replace the username and email field below
+        # with correct GitHub Email and Username
         run: |
           git config --global user.name "barrett38"
           git config --global user.email "barrett1614@gmail.com"
