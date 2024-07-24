@@ -49,4 +49,6 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # This token is provided by GitHub Actions
+          # and does not need to be replaced with any other value
 ```
